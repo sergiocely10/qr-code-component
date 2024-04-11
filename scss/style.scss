@@ -27,6 +27,14 @@ body {
     gap: 20px;
     border-radius: 10px;
     box-shadow: 0px 15px 40px -18px rgba(0, 0, 0, 0.24);
+
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    transform: scale(1);
+    transition: .2s ease-in-out;
+
 }
 
 .component__qr {
@@ -41,6 +49,11 @@ body {
         border-radius: 10px;
     }
 
+}
+
+.component:hover{
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
 }
 
 .component__info {
@@ -69,5 +82,15 @@ body {
 
     a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

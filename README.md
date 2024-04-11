@@ -33,6 +33,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - HTML
 - CSS - Sass
 - Flexbox
+- CSS Animation
 
 ### Steps
 - I analyze the design and identified the different elements from it.
@@ -40,7 +41,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - I coded the first CSS styles to have my initial sketch.
 - Using Flexbox help me to organize and to distribute the elements: QR component and footer.
 - When everything looks great, I added the QR image in the QR component.
-- Finally, I added last details like margins, paddings, colors, fonts and shadows.
+- Finally, I added last details like margins, paddings, colors, fonts, shadows and animations.
 
 ### What I learned
 
@@ -72,9 +73,27 @@ body {
 
 In this process, using Firefox Dev Tool help to identify how min-height affect each flex item.
 
+I added a pair CSS animations: fade-in on page load and hover. For fade-in, I used @keyframes and for hover: transform and transitions properties. Because I wanted to have a smooth transition for hover action, I neeeded to add both properties to my qr component as my qr component hover. 
+
+```css
+/* Hover  */
+.component {
+    transform: scale(1);
+    transition: .2s ease-in-out;
+}
+
+.component:hover{
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+```
+
+
 ### Useful resources
 
 - [Flexbox tips and examples](https://youtu.be/ZxuAc1Ye_VE?si=iXVCiuhFCkTP4irx) - This helped me for my sticky footer. reason.
+- [Fade-in CSS](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/)
 
 ## Author
 - Frontend Mentor - [@sergiocely10](https://www.frontendmentor.io/profile/sergiocely10)
